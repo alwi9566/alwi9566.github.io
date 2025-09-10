@@ -1,77 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Wellfleet&display=swap" rel="stylesheet">
-    <style>
-        html{
-            font-family: "Wellfleet",;
-        }
-        .color-box{
-            height:100px;
-            width: 100px;
-        }
-        box1 {
-            background-color: #BFC3BA;
-        }
-        box2 {
-            background-color: #0D324D;
-        }
-        box3 {
-            background-color: #E15554;
-        }
-        box4 {
-            background-color: #5C573E;
-        }
-        box5 {
-            background-color: #9368B7;
-        }
-
-        p {
-            font-size: 16;
-        }
-
-        .small-text {
-            font-size: 12px;
-        }
-        h3 {
-            font-size: 20px;
-        }
-        h2 {
-            font-size: 24px;
-        }
-        h3 {
-            font-size: 28px;
-        }
-        a {
-            text-decoration: none;
-            color: #5C573E;
-        }
-        a:hover {
-            text-decoration: underline;
-            color: #9368B7;
-        }
-        a:visted{
-            color: #0D324D;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Wellfleet&display=swap" rel="stylesheet">
+<style>
+html{
+font-family: "Wellfleet", serif;
+ }
+.color-box{
+height:100px;
+width: 100px;
+margin: 10px;
+display: inline-block;
+ }
+#box1 {
+background-color: #BFC3BA;
+ }
+#box2 {
+background-color: #0D324D;
+ }
+#box3 {
+background-color: #E15554;
+ }
+#box4 {
+background-color: #5C573E;
+ }
+#box5 {
+background-color: #9368B7;
+ }
+p {
+font-size: 16px;
+ }
+.small-text {
+font-size: 12px;
+ }
+.ibm-plex-serif-semibold { 
+font-family: "IBM Plex Serif", serif; 
+font-weight: 600; 
+font-style: normal; 
+ }
+h1 {
+font-size: 32px;
+font-family: "IBM Plex Serif", serif;
+font-weight: 600;
+ }
+h2 {
+font-size: 24px;
+font-family: "IBM Plex Serif", serif;
+font-weight: 600;
+ }
+h3 {
+font-size: 20px;
+font-family: "IBM Plex Serif", serif;
+font-weight: 600;
+ }
+a {
+text-decoration: none;
+color: #5C573E;
+ }
+a:hover {
+text-decoration: underline;
+color: #9368B7;
+ }
+a:visited{
+color: #0D324D;
+ }
+</style>
 </head>
 <body>
-    <div class="color-box" id="1"> </div>
-    <div class="color-box" id="2"> </div>
-    <div class="color-box" id="3"> </div>
-    <div class="color-box" id="4"> </div>
-    <div class="color-box" id="5"> </div>
-    
-    <h1>This is a heading 1</h1>
-    <h1>This is a heading 2</h1>
-    <h1>This is a heading 2</h1>
+<div class="color-box" id="box1"> </div>
+<div class="color-box" id="box2"> </div>
+<div class="color-box" id="box3"> </div>
+<div class="color-box" id="box4"> </div>
+<div class="color-box" id="box5"> </div>
 
-    <p>This is a paragraph text</p>
-    <p class="small-text">This is a small text</p>
+<p>Hex Code 1: #BFC3BA Contrast: 4.2 | Hex Code 2: #0D324D Contrast: 14.8 | Hex Code 3: #E15554 Contrast: 3.1 | Hex Code 4: #5C573E Contrast: 8.9 | Hex Code 5: #9368B7 Contrast: 5.4</p>
 
-    <p><a href="#">This is a link</a></p>
+<h1 class="ibm-plex-serif-semibold">This is a heading 1</h1>
+<h2 class="ibm-plex-serif-semibold">This is a heading 2</h2>
+<h3 class="ibm-plex-serif-semibold">This is a heading 3</h3>
+<p>This is a paragraph text</p>
+<p class="small-text">This is a small text</p>
+<p><a href="#">This is a link</a></p>
+<button>This is a button</button>
+<input type="email" placeholder="Email input example">
 </body>
 </html>
