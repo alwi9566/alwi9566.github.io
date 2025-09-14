@@ -1,0 +1,121 @@
+/* Design System Styles */
+
+/* Typography - Primary: Wellfleet, Secondary: IBM Plex Serif */
+html{
+font-family: "Wellfleet", serif;
+ }
+
+ /* Page Background */
+body {
+background-color: #BFC3BA; /* Light sage background */
+ }
+
+/* Color Palette */
+#box1 {
+background-color: #BFC3BA; 
+ }
+#box2 {
+background-color: #0D324D; 
+ }
+#box3 {
+background-color: #E15554; 
+ }
+#box4 {
+background-color: #5C573E; 
+ }
+#box5 {
+background-color: #9368B7; 
+ }
+
+/* Typography Hierarchy */
+p {
+font-size: 16px;
+ }
+.small-text {
+font-size: 12px;
+ }
+.ibm-plex-serif-semibold { 
+font-family: "IBM Plex Serif", serif; 
+font-weight: 600; 
+font-style: normal; 
+ }
+h1 {
+font-size: 32px;
+ }
+h2 {
+font-size: 24px;
+ }
+h3 {
+font-size: 20px;
+ }
+
+/* Spacing System - Based on 8px grid */
+.spacing-demo {
+margin: 8px 0; /* Base unit: 8px */
+ }
+.spacing-small {
+padding: 8px;
+background-color: #BFC3BA;
+margin: 8px 0;
+ }
+.spacing-medium {
+padding: 16px; /* 2x base */
+background-color: #BFC3BA;
+margin: 16px 0;
+ }
+.spacing-large {
+padding: 24px; /* 3x base */
+background-color: #BFC3BA;
+margin: 24px 0;
+ }
+.spacing-xlarge {
+padding: 32px; /* 4x base */
+background-color: #BFC3BA;
+margin: 32px 0;
+ }
+
+/* Link Styles */
+a {
+text-decoration: none;
+color: #5C573E;
+ }
+a:hover {
+text-decoration: underline;
+color: #9368B7;
+ }
+a:visited{
+color: #0D324D;
+ }
+
+/* Button Component States */
+button {
+background-color: #5C573E;
+color: white;
+border: none;
+padding: 8px 16px;
+font-size: 14px;
+cursor: pointer;
+font-family: "Wellfleet", serif;
+margin: 8px;
+ }
+button:hover {
+background-color: #9368B7;
+ }
+button:focus {
+background-color: #0D324D;
+outline: 2px solid #E15554;
+ }
+
+/* Form Input Styling */
+input[type="text"], input[type="email"] {
+padding: 8px;
+border: 2px solid #5C573E;
+font-family: "Wellfleet", serif;
+font-size: 14px;
+margin: 8px;
+ }
+input[type="text"]:focus, input[type="email"]:focus {
+outline: none;
+border-color: #9368B7;
+background-color: #BFC3BA;
+ }
