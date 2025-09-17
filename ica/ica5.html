@@ -21,7 +21,7 @@
         button {
             height: 3rem;
             width: 10rem;
-            border-radius: 30%;
+            border-radius: 50%;
             border: 2px black solid;
         }
 
@@ -63,10 +63,14 @@
             //alert("this is an alert");
             if (info == false){
                 details.style.display = 'flex';
+                expandBtn.textContent = '-';
+                expandBtn.setAttribute('aria-label', 'Collapse card');
                 info = true;
             }
             else {
                 details.style.display = 'none';
+                expandBtn.textContent = '+';
+                expandBtn.setAttribute('aria-label', 'Expand card');
                 info = false;
             }
         }
