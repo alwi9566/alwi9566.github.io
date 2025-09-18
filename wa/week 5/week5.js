@@ -14,6 +14,7 @@ function showMenu() {
 
     else {
         navToggle.setAttribute("aria-expanded", "false");
+    }
 
 }
 
