@@ -1,0 +1,39 @@
+body {
+background-color: #BFC3BA; /* Light sage background */
+}
+
+.main-nav { 
+    display: flex;
+    justify-content: space-between;
+    background-color: bisque;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2em;
+   
+}
+
+ /* style links */
+
+.nav-toggle {
+        display: none;
+    }
+
+ @media screen and (max-width: 768px) {
+    .nav-toggle {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-self: center;
+        flex-direction: column;
+    }
+
+    .hamburger {
+        background-color: black;
+        height: 6px;
+        width: 40px;
+        padding: 0;
+        margin: 3px;
+    }
+ }

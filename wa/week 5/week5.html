@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community</title>
+    <link rel="stylesheet" href="week5.css">
+</head>
+<body> 
+    <nav class="main-nav">
+      <div class="nav-brand">Community Hub</div>
+      <button class="nav-toggle" aria-label="Toggle navigation menu">
+        <span class = "hamburger"></span>
+        <span class = "hamburger"></span>
+        <span class = "hamburger"></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+    </nav>
+
+
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu'); 
+
+        navToggle.addEventListener('click' , showInfo);
+
+        function showInfo() {
+            //console.log("hi!");
+            //alert("this is an alert");
+            if (info == false){
+                nav-menu.stylesheet.display = 'flex';
+                navToggle.setAttribute('aria-label', 'Collapse card');
+                info = true;
+            }
+            else {
+                nav-menu.stylesheet.display = 'none';
+                navToggle.setAttribute('aria-label', 'Expand card');
+                info = false;
+            }
+        }
+
+
+    </script>
+
+</body>
+</html>
