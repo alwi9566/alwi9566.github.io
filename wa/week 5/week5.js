@@ -1,23 +1,18 @@
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu'); 
 
-
-var menu_show = false
-
 function showMenu() {
-    var shown = navMenu.classList.toggle("show");
-    navMenu.classList.toggle("hide");
-
+    console.log("Button clicked!"); 
+    const show = navMenu.classList.toggle("show");
+    console.log("Show class added:", show); 
+    
+    // Update aria-expanded for accessibility
     if (show) {
         navToggle.setAttribute("aria-expanded", "true");
     }
-
     else {
         navToggle.setAttribute("aria-expanded", "false");
     }
-
 }
 
 navToggle.addEventListener('click', showMenu);
-
-/*kjasdhflkjahfjharefi*/
