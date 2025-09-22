@@ -16,3 +16,10 @@ function showMenu() {
 }
 
 navToggle.addEventListener('click', showMenu);
+
+navToggle.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        showMenu();
+    }
+});
