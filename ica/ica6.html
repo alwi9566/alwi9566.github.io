@@ -5,34 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-    /* Current Flexbox CSS 
-    .gallery-container { display: flex; flex-direction: column; }
-    .gallery-grid { display: flex; flex-wrap: wrap; gap: 1rem; }
-    .photo-card { flex: 1 1 300px; height: 200px; }
-    .featured { flex: 1 1 100%; height: 300px; }
-   */
-   
-   .gallery-container{
+    .gallery-container{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    width: 300px;
-    grid-template-areas: 
-    "header header"
-    "nav sidebar"
-    "nav sidebar"
-    ;
-   }
-   .grid-gallery{
-    display: grid;
-    grid-column: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-   }
-   #photo-card{
-    grid-column: span 2;
-   }
+        grid-template-areas:
+            "header header"
+            "nav    sidebar" 
+            "main   sidebar2";
+        grid-template-columns: 1fr 200px;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 1rem;
+        gap: 1rem;
+    }
+   .gallery-grid{
+        display: grid;
+        grid-area: main;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+    }
+    .gallery-nav { 
+        grid-area: sidebar2; 
+    }
+    .gallery-sidebar { 
+        grid-area: sidebar;
+    }
+    .gallery-header {
+        grid-area: header;
+    }
+    .photo-card {
+        background: #f0f0f0;
+        border: 1px solid #ccc;
+        padding: 1rem;
+        text-align: center;
+    }
+    #photo-card{
+        grid-column: span 2;
+    }
 
+   
    </style>
+   
 </head>
 <body>
     <div class="gallery-container">
@@ -43,12 +55,12 @@
         <button>Architecture</button>
     </nav>
     <main class="gallery-grid">
-        <div class="photo-card">Photo 1</div>
-        <div class="photo-card">Photo 2</div>
-        <div class="photo-card">Photo 3</div>
-        <div class="photo-card featured">Featured Photo</div>
-        <div class="photo-card">Photo 5</div>
-        <div class="photo-card">Photo 6</div>
+        <div class="photo-card" data-category="nature">Photo 1</div>
+        <div class="photo-card" data-category="architecture">Photo 2</div>
+        <div class="photo-card" data-category="nature">Photo 3</div>
+        <div class="photo-card featured" id="photo-card" data-category="architecture" >Featured Photo</div>
+        <div class="photo-card" data-category="architecture">Photo 5</div>
+        <div class="photo-card" data-category="nature">Photo 6</div>
     </main>
     <aside class="gallery-sidebar">Filter Options</aside>
     </div>
