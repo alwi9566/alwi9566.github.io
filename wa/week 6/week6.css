@@ -1,0 +1,92 @@
+body {
+  background-color: #BFC3BA; /* Light sage background */
+}
+
+/* Main container using CSS Grid */
+.main-nav {
+  display: grid;
+  grid-template-columns: 1fr auto auto; /* Brand, toggle, menu */
+  grid-template-areas: "brand toggle menu";
+  background-color: bisque;
+  position: relative;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.nav-brand {
+  grid-area: brand;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* Navigation menu using grid */
+.nav-menu {
+  grid-area: menu;
+  display: grid;
+  grid-template-columns: repeat(5, auto); /* 5 columns sized to content */
+  grid-template-rows: 1fr; /* Single row */
+  gap: 2em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-toggle {
+  grid-area: toggle;
+  display: none;
+  justify-self: end;
+}
+
+/* Add styling for nav links */
+.nav-menu a {
+  text-decoration: none;
+  color: inherit;
+  padding: 10px 15px;
+  display: block;
+}
+
+.nav-menu a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-toggle {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-self: center;
+        flex-direction: column;
+    }
+
+    .hamburger {
+        background-color: black;
+        height: 6px;
+        width: 40px;
+        padding: 0;
+        margin: 3px;
+    }
+   
+    .nav-menu{
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 20px;
+        background-color: white;
+        border: 1px solid #ccc;
+        flex-direction: column;
+        gap: 0;
+        min-width: 200px;
+        
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+    
+    .nav-menu li {
+        padding: 15px 20px;
+        border-bottom: 1px solid #eee;
+    }
+}
