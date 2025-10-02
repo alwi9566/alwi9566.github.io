@@ -24,7 +24,7 @@ body {
   grid-area: menu;
   display: grid;
   grid-template-columns: repeat(5, auto); /* 5 columns sized to content */
-  grid-template-rows: 1fr; /* Single row */
+  grid-template-rows: 1fr; 
   gap: 2em;
   list-style: none;
   margin: 0;
@@ -85,7 +85,8 @@ body {
   top: 100%;
   left: 0;
   background-color: white;
-  min-width: 200px;
+  min-width: fit-content;
+  max-width: fit-content;
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
   opacity: 0;
   visibility: hidden;
