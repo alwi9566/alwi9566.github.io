@@ -75,3 +75,26 @@ if (contactForm) {
         }, 5000);
     });
 }
+
+// Theme switching
+const themeToggle = document.querySelector('.theme-toggle');
+
+function setTheme(theme) {
+    localStorage.setItem('userTheme', theme);
+    document.body.className = theme;
+    themeToggle.textContent = theme === 'dark' ? 'Light' : 'Dark';
+}
+
+window.addEventListener('load', function() {
+    const savedTheme = localStorage.getItem('userTheme') || 'light';
+    document.body.className = savedTheme;
+    if (savedTheme === 'dark') {
+        themeToggle.textContent = 'Light';
+    }
+});
+
+themeToggle.addEventListener('click', () => {
+    const currentTheme = document.body.className === 'dark' ? 'dark' : 'light';
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+});
