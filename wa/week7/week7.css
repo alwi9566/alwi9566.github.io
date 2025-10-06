@@ -2,10 +2,10 @@ body {
   background-color: #BFC3BA; /* Light sage background */
 }
 
-/* Main container using CSS Grid */
+/* Main container  */
 .main-nav {
   display: grid;
-  grid-template-columns: 1fr auto auto; /* Brand, toggle, menu */
+  grid-template-columns: 1fr auto auto; 
   grid-template-areas: "brand toggle menu";
   background-color: bisque;
   position: relative;
@@ -19,11 +19,11 @@ body {
   font-size: 1.2em;
 }
 
-/* Navigation menu using grid */
+/* Navigation menu*/
 .nav-menu {
   grid-area: menu;
   display: grid;
-  grid-template-columns: repeat(5, auto); /* 5 columns sized to content */
+  grid-template-columns: repeat(5, auto); 
   grid-template-rows: 1fr; 
   gap: 2em;
   list-style: none;
@@ -53,6 +53,7 @@ body {
   position: relative;
 }
 
+/* Dropdown menu */
 .dropdown-btn {
   background: none;
   border: none;
