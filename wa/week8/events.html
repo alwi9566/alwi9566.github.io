@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="week8.css">
+    <link rel="stylesheet" href="privacy-ui.css">
+    <style>
+        .events-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .location-section {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .location-btn {
+            background-color: bisque;
+            color: #333;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin: 10px;
+        }
+        
+        .location-btn:hover {
+            background-color: #f5deb3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        #locationDisplay {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 4px;
+        }
+        
+        #eventsContainer {
+            margin-top: 30px;
+        }
+        
+        body.dark .location-section {
+            background-color: #333;
+            color: #e0e0e0;
+        }
+        
+        body.dark .location-btn {
+            background-color: #d4a373;
+            color: #1a1a1a;
+        }
+        
+        body.dark .location-btn:hover {
+            background-color: #c99565;
+        }
+    </style>
+</head>
+<button class="theme-toggle" aria-label="Toggle theme">Dark</button>
+<body>
+    <nav class="main-nav">
+        <div class="nav-brand">Drift Hub</div>
+        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+        </button>
+        <ul class="nav-menu">
+            <li><a href="week8.html">Home</a></li>
+            <li class="dropdown">
+                <button class="dropdown-btn">Resources</button>
+                <ul class="dropdown-menu">
+                    <li><a href="technical-resources.html">Technical Resources</a></li>
+                    <li><a href="knowledge-resources.html">Knowledge Resources</a></li>
+                </ul>
+            </li>
+            <li><a href="events.html">Find Local Events</a></li>
+            <li><a href="share.html">Share your Stuff!</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="events-container">
+        <h1>Find Local Drift Events</h1>
+        
+        <div class="location-section">
+            <h2>📍 Show Events Near You</h2>
+            <p>Share your location to see drift events and meetups in your state.</p>
+            <p style="font-size: 0.9em; color: #666;">
+                We only save your state (like "Colorado"), not your exact location. 
+                <a href="privacy.html">Privacy Policy</a>
+            </p>
+            
+            <button onclick="enableLocationForEvents()" class="location-btn">
+                📍 Show Events Near Me
+            </button>
+            
+            <div id="locationDisplay"></div>
+        </div>
+        
+    </div>
+
+    <script src="week8.js"></script>
+    <script src="privacy-manager.js"></script>
+    <script src="privacy-ui.js"></script>
+</body>
+</html>

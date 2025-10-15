@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Drift Hub</title>
+    <link rel="stylesheet" href="week8.css">
+    <link rel="stylesheet" href="privacy-ui.css">
+    <style>
+        .privacy-page {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .privacy-page h1 {
+            color: #333;
+            border-bottom: 3px solid bisque;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .privacy-page h2 {
+            color: #333;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        .privacy-page p {
+            line-height: 1.8;
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        .privacy-page ul {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        
+        .privacy-page li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+            color: #555;
+        }
+        
+        .privacy-highlight {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-left: 4px solid bisque;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .last-updated {
+            color: #999;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+        
+        body.dark .privacy-page h1,
+        body.dark .privacy-page h2 {
+            color: #e0e0e0;
+        }
+        
+        body.dark .privacy-page p,
+        body.dark .privacy-page li {
+            color: #b0b0b0;
+        }
+        
+        body.dark .privacy-highlight {
+            background-color: #2a2a2a;
+        }
+    </style>
+</head>
+<button class="theme-toggle" aria-label="Toggle theme">Dark</button>
+<body>
+    <nav class="main-nav">
+        <div class="nav-brand">Drift Hub</div>
+        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+        </button>
+        <ul class="nav-menu">
+            <li><a href="week8.html">Home</a></li>
+            <li class="dropdown">
+                <button class="dropdown-btn">Resources</button>
+                <ul class="dropdown-menu">
+                    <li><a href="technical-resources.html">Technical Resources</a></li>
+                    <li><a href="knowledge-resources.html">Knowledge Resources</a></li>
+                </ul>
+            </li>
+            <li><a href="events.html">Find Local Events</a></li>
+            <li><a href="share.html">Share your Stuff!</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="privacy-page">
+        <h1>Privacy Policy</h1>
+        <p class="last-updated">Last Updated: October 2025</p>
+
+        <div class="privacy-highlight">
+            <strong>Quick Summary:</strong> Drift Hub respects your privacy. We only store data on YOUR device (not on our servers), and you have complete control over it. Everything expires in 30 days or when you clear it.
+        </div>
+
+        <h2>What We Collect</h2>
+        <p>Drift Hub stores minimal information on your device using your browser's local storage:</p>
+        <ul>
+            <li><strong>Theme Preference:</strong> Whether you prefer light or dark mode</li>
+            <li><strong>Your Location (Optional):</strong> Your state (not exact location) to show relevant local events</li>
+            <li><strong>Form Data (Temporary):</strong> Contact form information is only used to send you a confirmation and is not permanently stored</li>
+            <li><strong>Your Consent:</strong> Whether you've agreed to data storage</li>
+        </ul>
+
+        <h2>Why We Collect It</h2>
+        <p>We collect this data to improve your experience:</p>
+        <ul>
+            <li><strong>Theme:</strong> So you don't have to switch to dark mode every time you visit</li>
+            <li><strong>Location:</strong> To show you drift events and meetups in your state</li>
+            <li><strong>Consent:</strong> To remember your privacy preferences</li>
+        </ul>
+
+        <h2>How We Store It</h2>
+        <div class="privacy-highlight">
+            <strong>Important:</strong> All data is stored in YOUR browser using localStorage. We do NOT send any information to external servers (except when you submit the contact form). Your data never leaves your device.
+        </div>
+        <p>Technical details:</p>
+        <ul>
+            <li>All data is stored with the prefix "driftHub_" in your browser's localStorage</li>
+            <li>Each piece of data has an automatic 30-day expiration date</li>
+            <li>Expired data is automatically deleted when you visit the site</li>
+            <li>Your location is stored at the state level only (e.g., "Colorado"), not precise coordinates</li>
+        </ul>
+
+        <h2>How Long We Keep It</h2>
+        <ul>
+            <li><strong>Preferences (theme):</strong> 30 days from last save</li>
+            <li><strong>Location:</strong> 30 days from when you shared it</li>
+            <li><strong>Consent:</strong> 1 year (so we don't ask repeatedly)</li>
+        </ul>
+        <p>All data automatically expires after these periods and is deleted from your browser.</p>
+
+        <h2>Your Controls</h2>
+        <p>You have complete control over your data:</p>
+        <ul>
+            <li><strong>Privacy Settings Button:</strong> Click the lock icon (🔒) in the bottom-left corner anytime</li>
+            <li><strong>View Your Data:</strong> See exactly what's stored in the Privacy Settings</li>
+            <li><strong>Delete Specific Data:</strong> Remove just your location or other individual items</li>
+            <li><strong>Clear All Data:</strong> Delete everything with one click</li>
+            <li><strong>Revoke Consent:</strong> Stop all future data storage at any time</li>
+            <li><strong>Browser Controls:</strong> You can also clear localStorage through your browser settings</li>
+        </ul>
+
+        <h2>External Services</h2>
+        <p>When you share your location, we use OpenStreetMap's free geocoding service to convert coordinates to your state name. This request is sent directly from your browser to OpenStreetMap.</p>
+
+        <h2>No Tracking or Analytics</h2>
+        <p>Drift Hub does NOT use:</p>
+        <ul>
+            <li>Cookies</li>
+            <li>Analytics services (like Google Analytics)</li>
+            <li>Advertising trackers</li>
+            <li>Social media tracking pixels</li>
+        </ul>
+
+        <h2>Changes to Privacy Policy</h2>
+        <p>If we change how we handle data, we'll update this page and the "Last Updated" date. We'll also show the privacy banner again to get your renewed consent.</p>
+
+        <h2>Contact Us</h2>
+        <p>Questions about privacy? <a href="contact.html">Contact us</a> and we'll get back to you.</p>
+
+        <div class="privacy-highlight">
+            <strong>Your Rights:</strong> You can access, delete, or export all your data at any time using the Privacy Settings button. If you decline consent, the site will still work but won't remember your preferences.
+        </div>
+    </div>
+
+    <script src="week8.js"></script>
+    <script src="privacy-manager.js"></script>
+    <script src="privacy-ui.js"></script>
+</body>
+</html>
