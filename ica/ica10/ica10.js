@@ -1,6 +1,6 @@
-let triviaBtn = document.querySelector("#js-new-quote").addEventListener('click',newTrivia);
+let triviaBtn = document.querySelector("#new-trivia").addEventListener('click',newTrivia);
 
-let answerBtn = document.querySelector('#js-tweet').addEventListener('click',newAnswer);
+let answerBtn = document.querySelector('#answerB').addEventListener('click',newAnswer);
 
 let current = {
     question: "",
@@ -32,14 +32,15 @@ async function newTrivia() {
 }
 
 function displayTrivia(question) {
-    const questionText = document.querySelector("#js-quote-text");
+    const questionText = document.querySelector("#trivia-text");
+    const answerText = document.querySelector('#answer-text');
     questionText.textContent = question;
     answerText.textContent = "";
 
 }
 
 function newAnswer() {
-    const answerText = document.querySelector('#js-answer-text');
+    const answerText = document.querySelector('#answer-text');
     answerText.textContent = current.answer;
 }
 
