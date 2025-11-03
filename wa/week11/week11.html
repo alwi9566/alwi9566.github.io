@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Finder</title>
-
-     <link rel="stylesheet" href="week11.css">
-     
+    <link rel="stylesheet" href="week11.css">
 </head>
 <body>
     <div class="container">
@@ -19,8 +17,60 @@
             </div>
             
             <div class="suggest-section">
-                <button onclick="suggestMovie()" style="height: 100%;">Suggest a Movie</button>
+                <button onclick="suggestMovie()">Suggest a Movie</button>
             </div>
+        </div>
+
+        <!-- New Filter Section -->
+        <div class="filters">
+            <h3>Filter Random Suggestions</h3>
+            <div class="filter-grid">
+                <div class="filter-item">
+                    <label for="yearFilter">Year Range:</label>
+                    <div class="year-inputs">
+                        <input type="number" id="yearFrom" placeholder="From" min="1900" max="2025">
+                        <span>to</span>
+                        <input type="number" id="yearTo" placeholder="To" min="1900" max="2025">
+                    </div>
+                </div>
+                
+                <div class="filter-item">
+                    <label for="ratingFilter">Minimum IMDb Rating:</label>
+                    <select id="ratingFilter">
+                        <option value="0">Any Rating</option>
+                        <option value="5">5.0+</option>
+                        <option value="6">6.0+</option>
+                        <option value="7" selected>7.0+</option>
+                        <option value="8">8.0+</option>
+                        <option value="9">9.0+</option>
+                    </select>
+                </div>
+                
+                <div class="filter-item">
+                    <label for="genreFilter">Genre:</label>
+                    <select id="genreFilter">
+                        <option value="">Any Genre</option>
+                        <option value="Action">Action</option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Horror">Horror</option>
+                        <option value="Sci-Fi">Sci-Fi</option>
+                        <option value="Thriller">Thriller</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Animation">Animation</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <label for="typeFilter">Type:</label>
+                    <select id="typeFilter">
+                        <option value="movie">Movies Only</option>
+                        <option value="series">TV Series Only</option>
+                        <option value="">Any Type</option>
+                    </select>
+                </div>
+            </div>
+            <button onclick="clearFilters()" class="clear-filters">Clear Filters</button>
         </div>
 
         <div id="result"></div>
