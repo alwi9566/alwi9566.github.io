@@ -18,6 +18,28 @@ const popularMovies = [
     'Mad Max Fury Road', 'Arrival', 'Blade Runner 2049', 'Dunkirk'
 ];
 
+// Populate year dropdowns
+function populateYearDropdowns() {
+    const currentYear = 2025;
+    const startYear = 1900;
+    
+    // Populate yearFrom dropdown (newest to oldest)
+    for (let year = currentYear; year >= startYear; year--) {
+        const option = document.createElement('option');
+        option.value = year;
+        option.textContent = year;
+        yearFrom.appendChild(option);
+    }
+    
+    // Populate yearTo dropdown (newest to oldest)
+    for (let year = currentYear; year >= startYear; year--) {
+        const option = document.createElement('option');
+        option.value = year;
+        option.textContent = year;
+        yearTo.appendChild(option);
+    }
+}
+
 // Wait for DOM to load before accessing elements
 document.addEventListener('DOMContentLoaded', function() {
     resultDiv = document.getElementById('result');
@@ -27,6 +49,9 @@ document.addEventListener('DOMContentLoaded', function() {
     ratingFilter = document.getElementById('ratingFilter');
     genreFilter = document.getElementById('genreFilter');
     typeFilter = document.getElementById('typeFilter');
+    
+    // Populate the year dropdowns
+    populateYearDropdowns();
     
     // Allow Enter key to search
     movieInput.addEventListener('keypress', function(e) {

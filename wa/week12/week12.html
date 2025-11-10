@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="week12.css">
 </head>
 <body>
-    <div class="container">
+    <main class="container">
         <h1>Movie Finder</h1>
         
-        <div class="controls">
+        <section class="controls">
             <div class="search-section">
+                <label for="movieInput" class="visually-hidden">Movie title</label>
                 <input type="text" id="movieInput" placeholder="Enter movie title...">
                 <button onclick="searchMovie()">Search Movie</button>
             </div>
@@ -19,18 +20,22 @@
             <div class="suggest-section">
                 <button onclick="suggestMovie()">Suggest a Movie</button>
             </div>
-        </div>
+        </section>
 
-        <!-- New Filter Section -->
-        <div class="filters">
-            <h3>Filter Random Suggestions</h3>
+        <!-- Filter Section -->
+        <section class="filters">
+            <h2>Filter Random Suggestions</h2>
             <div class="filter-grid">
                 <div class="filter-item">
-                    <label for="yearFilter">Year Range:</label>
+                    <label for="yearFrom">Year Range:</label>
                     <div class="year-inputs">
-                        <input type="number" id="yearFrom" placeholder="From" min="1900" max="2025">
+                        <select id="yearFrom">
+                            <option value="">From</option>
+                        </select>
                         <span>to</span>
-                        <input type="number" id="yearTo" placeholder="To" min="1900" max="2025">
+                        <select id="yearTo">
+                            <option value="">To</option>
+                        </select>
                     </div>
                 </div>
                 
@@ -71,10 +76,10 @@
                 </div>
             </div>
             <button onclick="clearFilters()" class="clear-filters">Clear Filters</button>
-        </div>
+        </section>
 
-        <div id="result"></div>
-    </div>
+        <div id="result" role="region" aria-live="polite"></div>
+    </main>
 
     <script src="week12.js"></script>
 </body>
