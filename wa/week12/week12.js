@@ -109,7 +109,7 @@ async function searchMovie() {
 
     resultDiv.innerHTML = '<div class="loading">Searching...</div>';
 
-    // First, try fuzzy matching against our local movie database
+    // fuzzy matching against our local movie database
     const fuse = new Fuse(popularMovies, {
         threshold: 0.4, // 0 = perfect match, 1 = match anything
         distance: 100,
@@ -118,7 +118,7 @@ async function searchMovie() {
     
     const fuzzyResults = fuse.search(movieTitle);
     
-    // If we found close matches in our database, use the best match
+    // If close matche, use the best match
     if (fuzzyResults.length > 0) {
         const bestMatch = fuzzyResults[0].item;
         const score = fuzzyResults[0].score;
@@ -204,20 +204,47 @@ async function searchFromSuggestion(movieTitle) {
 }
 
 // New function to display search results
-function displaySearchResults(movies) {
+async function displaySearchResults(movies) {
+    // Filter the results based on user's filter selections
+    let filteredMovies = [];
+    
+    // Fetch full details for each movie to check filters
+    resultDiv.innerHTML = '<div class="loading">Filtering results...</div>';
+    
+    for (const movie of movies) {
+        try {
+            const response = await fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&i=${movie.imdbID}`);
+            const data = await response.json();
+            
+            if (data.Response === 'True' && meetsFilterCriteria(data)) {
+                filteredMovies.push(data);
+            }
+        } catch (error) {
+            console.error('Error fetching movie details:', error);
+        }
+    }
+    
+    // If no movies match the filters
+    if (filteredMovies.length === 0) {
+        resultDiv.innerHTML = '<div class="error">No movies found matching your search and filter criteria. Try adjusting your filters.</div>';
+        return;
+    }
+    
+    // Display the filtered results
     let html = '<div class="search-results">';
-    html += '<h3>Search Results - Click on a movie to see details:</h3>';
+    html += `<h3>Found ${filteredMovies.length} result(s) - Click on a movie to see details:</h3>`;
     html += '<div class="results-grid">';
     
-    movies.forEach(movie => {
+    filteredMovies.forEach(movie => {
         const posterUrl = movie.Poster !== 'N/A' ? movie.Poster : 'https://via.placeholder.com/300x450?text=No+Poster';
         html += `
-            <div class="result-card" onclick="getMovieDetails('${movie.imdbID}')">
+            <div class="result-card" onclick="displayMovieFromCard('${movie.imdbID}')">
                 <img src="${posterUrl}" alt="${movie.Title} poster">
                 <div class="result-info">
                     <div class="result-title">${movie.Title}</div>
                     <div class="result-year">${movie.Year}</div>
                     <div class="result-type">${movie.Type}</div>
+                    <div class="result-rating">⭐ ${movie.imdbRating}/10</div>
                 </div>
             </div>
         `;
@@ -225,6 +252,11 @@ function displaySearchResults(movies) {
     
     html += '</div></div>';
     resultDiv.innerHTML = html;
+}
+
+// Function to display movie from result card (stores full data to avoid extra API call)
+function displayMovieFromCard(imdbID) {
+    getMovieDetails(imdbID);
 }
 
 // New function to get full movie details by IMDb ID
