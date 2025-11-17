@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Finder</title>
+    <link rel="stylesheet" href="week13.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Movie Finder</h1>
+        
+        <section class="controls">
+            <div class="search-section">
+                <label for="movieInput" class="visually-hidden">Movie title</label>
+                <input type="text" id="movieInput" placeholder="Enter movie title...">
+                <button onclick="searchMovie()">Search Movie</button>
+            </div>
+            
+            <div class="suggest-section">
+                <button onclick="suggestMovie()">Suggest a Movie</button>
+            </div>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="filters">
+            <h2>Filter Results</h2>
+            <p class="filter-description">These filters apply to searches</p>
+            <div class="filter-grid">
+                <div class="filter-item">
+                    <label for="yearFrom">Year Range:</label>
+                    <div class="year-inputs">
+                        <select id="yearFrom">
+                            <option value="">From</option>
+                        </select>
+                        <span>to</span>
+                        <select id="yearTo">
+                            <option value="">To</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="filter-item">
+                    <label for="ratingFilter">Minimum IMDb Rating:</label>
+                    <select id="ratingFilter">
+                        <option value="0"selected>Any Rating</option>
+                        <option value="5">5.0+</option>
+                        <option value="6">6.0+</option>
+                        <option value="7" >7.0+</option>
+                        <option value="8">8.0+</option>
+                        <option value="9">9.0+</option>
+                    </select>
+                </div>
+                
+                <div class="filter-item">
+                    <label for="genreFilter">Genre:</label>
+                    <select id="genreFilter">
+                        <option value="">Any Genre</option>
+                        <option value="Action">Action</option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Horror">Horror</option>
+                        <option value="Sci-Fi">Sci-Fi</option>
+                        <option value="Thriller">Thriller</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Animation">Animation</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <label for="typeFilter">Type:</label>
+                    <select id="typeFilter">
+                        <option value="movie">Movies Only</option>
+                        <option value="series">TV Series Only</option>
+                        <option value="">Any Type</option>
+                    </select>
+                </div>
+            </div>
+            <button onclick="clearFilters()" class="clear-filters">Clear Filters</button>
+        </section>
+
+        <div id="result" role="region" aria-live="polite"></div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+    <script src="week13.js"></script>
+</body>
+</html>
