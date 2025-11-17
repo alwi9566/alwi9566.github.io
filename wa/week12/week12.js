@@ -27,7 +27,7 @@ async function loadMovies() {
 // Populate year dropdowns
 function populateYearDropdowns() {
     const currentYear = 2025;
-    const startYear = 1895; // Early cinema era
+    const startYear = 1900; // Early cinema era
     
     // Populate yearFrom dropdown (newest to oldest)
     for (let year = currentYear; year >= startYear; year--) {
