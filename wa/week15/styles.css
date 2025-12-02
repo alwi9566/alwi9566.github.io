@@ -1,0 +1,144 @@
+html {
+  font-family: "Merriweather", Georgia, serif;
+  color: #1B2430;
+}
+
+body {
+  background-color: #F6F7F9; 
+  margin: 0;
+  padding: 0;
+  line-height: 1.45;
+}
+
+/* Layout container to keep content tidy */
+main, div {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-top: 90px; /* leave room for fixed nav */
+}
+
+/* Header styles */
+header, #header {
+  text-align: left;
+  margin-bottom: 18px;
+}
+h1 {
+  font-size: 34px;
+  margin: 6px 0 10px 0;
+  letter-spacing: -0.5px;
+}
+h2 {
+  font-size: 20px;
+  margin: 12px 0 6px 0;
+  font-weight: 600;
+}
+
+/* Navigation - fixed top, right, clean simple look */
+nav {
+  position: fixed;
+  top: 18px;
+  right: 6%;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  background-color: rgba(255,255,255,0.95);
+  border: 1px solid #E6E9EC;
+  padding: 8px 14px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(27,36,48,0.06);
+  z-index: 50;
+  font-family: Helvetica, Arial, sans-serif; /* second font for nav */
+  font-size: 15px;
+}
+
+/* Link styles */
+nav a, a {
+  text-decoration: none;
+  color: #22313A;
+}
+nav a:hover {
+  text-decoration: underline;
+  color: #145A5C;
+}
+
+/* Make headshot look neat */
+#headshot img {
+  display: block;
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(27,36,48,0.08);
+  margin-bottom: 12px;
+}
+
+/* Aside quote styling */
+aside {
+  margin-top: 12px;
+  padding: 12px;
+  background-color: #FFFFFF;
+  border-left: 4px solid #E6E9EC;
+  color: #465560;
+  font-style: italic;
+}
+
+/* Sections for projects/contact/resume */
+section {
+  margin-top: 14px;
+  background-color: #FFFFFF;
+  padding: 14px;
+  border: 1px solid #EEF1F4;
+  border-radius: 6px;
+}
+
+/* Links inside sections */
+section a {
+  color: #145A5C;
+  text-decoration: none;
+}
+section a:hover {
+  text-decoration: underline;
+}
+
+/* Small responsive tweak: keep nav usable on smaller screens */
+@media (max-width: 800px) {
+  nav {
+    right: 3%;
+    top: 12px;
+    gap: 10px;
+    font-size: 14px;
+  }
+  main, div {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 110px;
+  }
+}
+
+/* Form & button touches (left mostly intact) */
+button {
+  background-color: #145A5C;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-family: Helvetica, Arial, sans-serif;
+  border-radius: 4px;
+}
+button:hover {
+  background-color: #0f4747;
+}
+
+input[type="text"], input[type="email"] {
+  padding: 8px;
+  border: 1px solid #DCE2E6;
+  font-family: "Merriweather", Georgia, serif;
+  font-size: 14px;
+  margin: 8px 0;
+}
+input[type="text"]:focus, input[type="email"]:focus {
+  outline: none;
+  border-color: #BFD7D7;
+  background-color: #FBFDFF;
+}
