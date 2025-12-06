@@ -8,29 +8,47 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div>
+    <canvas id="particle-bg"></canvas>
+    <main>
         <nav>
             <a href="week15.html">Homepage</a>
-            <a href="aboutme.html">About Me</a>
+            <a href="resume.html">Resume</a>
             <a href="projects.html">Projects</a>
             <a href="contact.html">Contact</a>
         </nav>
-        <h1>Professional Projects</h1>
-
-            <h2>Project 1</h2>
-            <p>Description for project 1</p>
-
-            <h2>Project 2</h2>
-            <p>Description for project 2</p>
-
-        <h1>Personal Projects</h1>
-
-            <h2>Personal Project 1</h2>
-            <p>Description for personal project 1</p>
-
-            <h2>Personal Project 2</h2>
-            <p>Description for personal project 2</p>
-
-    </div>
+        
+        <header>
+            <h1>Projects</h1>
+        </header>
+        
+        <section class="project-category">
+            <h2>Professional Projects</h2>
+            
+            <div class="project-item">
+                <h3>Project 1</h3>
+                <p>Description for project 1</p>
+            </div>
+            
+            <div class="project-item">
+                <h3>Project 2</h3>
+                <p>Description for project 2</p>
+            </div>
+        </section>
+        
+        <section class="project-category">
+            <h2>Personal Projects</h2>
+            
+            <div class="project-item">
+                <h3>Personal Project 1</h3>
+                <p>Description for personal project 1</p>
+            </div>
+            
+            <div class="project-item">
+                <h3>Personal Project 2</h3>
+                <p>Description for personal project 2</p>
+            </div>
+        </section>
+    </main>
+    <script src="particle-bg.js"></script>
 </body>
 </html>
