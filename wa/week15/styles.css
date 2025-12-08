@@ -111,6 +111,37 @@ nav a:hover {
   border-radius: 8px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
+/* Homepage intro section - photo and text side by side */
+.intro-section {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.intro-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: #f1f5f9;
+}
+
+.intro-text p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Make it responsive - stack on mobile */
+@media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column;
+  }
+  
+  #headshot img {
+    max-width: 100%;
+  }
+}
 
 /* Aside quote styling */
 aside {
