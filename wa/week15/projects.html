@@ -22,33 +22,113 @@
         </header>
         
         <section class="project-category">
-            <h2>Professional Projects</h2>
+            <h2>Visualization Projects</h2>
             
             <div class="project-item">
-                <h3>Project 1</h3>
-                <p>Description for project 1</p>
-            </div>
-            
-            <div class="project-item">
-                <h3>Project 2</h3>
-                <p>Description for project 2</p>
+                <h3>World Happiness Report Analysis</h3>
+                <p>Interactive data visualizations exploring the 2016 World Happiness Report. Analyzing correlations between economic factors, social support, and happiness scores across 157 countries using Apache ECharts.</p>
+                
+                <div id="loading-status" class="viz-status">Loading data...</div>
+                
+                <!-- Chart 1: Scatter Plot -->
+                <h4 class="chart-title">GDP vs Happiness Score</h4>
+                <div id="happiness-chart1" class="viz-container"></div>
+                
+                <!-- Chart 2: Radar Chart -->
+                <h4 class="chart-title">Happiness Factors Comparison</h4>
+                <div id="happiness-chart2" class="viz-container"></div>
+                
+                <p><strong>Technologies:</strong> Apache ECharts, PapaParse, JavaScript, CSV Data Analysis</p>
+                <p><strong>Key Insights:</strong></p>
+                <ul>
+                    <li>Strong positive correlation between GDP per capita and happiness scores</li>
+                    <li>Top-ranked countries excel across multiple happiness factors including family support and health</li>
+                </ul>
             </div>
         </section>
         
         <section class="project-category">
-            <h2>Personal Projects</h2>
+            <h2>Machine Learning Projects</h2>
             
             <div class="project-item">
-                <h3>Personal Project 1</h3>
-                <p>Description for personal project 1</p>
-            </div>
-            
-            <div class="project-item">
-                <h3>Personal Project 2</h3>
-                <p>Description for personal project 2</p>
+                <h3>Chess Performance Predictor & Style Analyzer</h3>
+                <p>A machine learning system that analyzes my personal chess games from Chess.com to predict win probability and identify distinct playing styles using neural networks and clustering algorithms.</p>
+                
+                <div class="project-overview">
+                    <h4 class="chart-title">Project Overview</h4>
+                    <p>This project uses the Chess.com Public API to extract and analyze my game data, applying machine learning techniques to understand performance patterns and predict game outcomes. The system combines supervised learning (neural networks) with unsupervised learning (K-means clustering) to provide comprehensive insights into playing behavior.</p>
+                </div>
+                
+                <div class="project-features">
+                    <h4 class="chart-title">Key Features</h4>
+                    <ul>
+                        <li><strong>Win Probability Prediction:</strong> Neural network model predicting game outcomes based on rating differences, time controls, and playing patterns</li>
+                        <li><strong>Playing Style Classification:</strong> K-means clustering identifying distinct playing styles based on game characteristics</li>
+                        <li><strong>Opening Repertoire Analysis:</strong> Code analysis revealing most successful opening strategies</li>
+                        <li><strong>Temporal Performance Patterns:</strong> Analysis of performance variations by time of day and day of week</li>
+                        <li><strong>Feature Engineering:</strong> Extraction of 9+ features from raw game data including rating advantages, game length, and time controls</li>
+                    </ul>
+                </div>
+                
+                <div class="project-technical">
+                    <h4 class="chart-title">Technical Implementation</h4>
+                    <p><strong>Data Collection & Processing:</strong></p>
+                    <ul>
+                        <li>Chess.com Public API integration for game retrieval</li>
+                        <li>PGN (Portable Game Notation) parsing using python-chess library</li>
+                        <li>Feature extraction from 6 months of games</li>
+                        <li>Data cleaning and preprocessing with pandas</li>
+                    </ul>
+                    
+                    <p><strong>Machine Learning Models:</strong></p>
+                    <ul>
+                        <li><strong>Neural Network Architecture:</strong> Sequential model with 64→32→16→1 neurons, ReLU activation, dropout regularization (0.3, 0.2), sigmoid output for binary classification</li>
+                        <li><strong>Model Performance:</strong> Achieved ~65% test accuracy with balanced precision and recall</li>
+                        <li><strong>Clustering Algorithm:</strong> K-means with 3 clusters, identifying aggressive, balanced, and defensive playing styles</li>
+                        <li><strong>Feature Scaling:</strong> StandardScaler normalization for optimal neural network performance</li>
+                    </ul>
+                    
+                    <p><strong>Key Technologies:</strong></p>
+                    <ul>
+                        <li><strong>Python:</strong> Primary development language</li>
+                        <li><strong>TensorFlow/Keras:</strong> Deep learning framework for neural network implementation</li>
+                        <li><strong>scikit-learn:</strong> Machine learning utilities (clustering, preprocessing, evaluation)</li>
+                        <li><strong>pandas & NumPy:</strong> Data manipulation and numerical computing</li>
+                        <li><strong>python-chess:</strong> Chess game parsing and move extraction</li>
+                        <li><strong>matplotlib & seaborn:</strong> Data visualization and statistical plotting</li>
+                        <li><strong>Chess.com API:</strong> RESTful API for game data retrieval</li>
+                    </ul>
+                </div>
+                
+                <div class="project-results">
+                    <h4 class="chart-title">Results & Insights</h4>
+                    <ul>
+                        <li><strong>Most Predictive Features:</strong> Rating difference, color (white/black), and game length showed strongest correlation with win outcomes</li>
+                        <li><strong>Playing Styles Identified:</strong> Three distinct clusters representing different approaches to game selection and timing preferences</li>
+                        <li><strong>Opening Analysis:</strong> Identified best-performing openings with statistical significance (minimum 5 games played)</li>
+                        <li><strong>Temporal Patterns:</strong> Discovered performance variations based on time of day and weekend vs. weekday play</li>
+                    </ul>
+                </div>
+                
+                <div class="project-future">
+                    <h4 class="chart-title">Future Enhancements</h4>
+                    <ul>
+                        <li>Interactive web dashboard for real-time win probability predictions</li>
+                        <li>Expanded dataset with longer historical data</li>
+                        <li>Deep learning model for opening-specific predictions</li>
+                    </ul>
+                </div>
             </div>
         </section>
     </main>
+    
+    <!-- ECharts Library -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <!-- PapaParse for CSV -->
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <!-- Particle Background -->
     <script src="particle-bg.js"></script>
+    <!-- Happiness Visualization Script -->
+    <script src="happiness-viz.js"></script>
 </body>
 </html>

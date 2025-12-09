@@ -111,37 +111,6 @@ nav a:hover {
   border-radius: 8px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
-/* Homepage intro section - photo and text side by side */
-.intro-section {
-  display: flex;
-  gap: 30px;
-  align-items: flex-start;
-  margin-bottom: 20px;
-}
-
-.intro-text {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  color: #f1f5f9;
-}
-
-.intro-text p {
-  margin: 0;
-  line-height: 1.6;
-}
-
-/* Make it responsive - stack on mobile */
-@media (max-width: 768px) {
-  .intro-section {
-    flex-direction: column;
-  }
-  
-  #headshot img {
-    max-width: 100%;
-  }
-}
 
 /* Aside quote styling */
 aside {
@@ -171,6 +140,38 @@ section {
 /* Homepage specific styling - no internal gaps */
 .homepage-content {
   gap: 0 !important;
+}
+
+/* Homepage intro section - photo and text side by side */
+.intro-section {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.intro-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.intro-text p {
+  margin: 0;
+  line-height: 1.6;
+  color: #f1f5f9;
+}
+
+/* Make it responsive - stack on mobile */
+@media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column;
+  }
+  
+  #headshot img {
+    max-width: 100%;
+  }
 }
 
 .homepage-content header,
@@ -518,4 +519,110 @@ input[type="text"]:focus, input[type="email"]:focus {
   border-color: #7dd3fc;
   background: rgba(15, 23, 42, 0.7);
   box-shadow: 0 0 0 3px rgba(125, 211, 252, 0.1);
+}
+
+/* Visualization Containers for Projects Page */
+.viz-container {
+  width: 100%;
+  height: 450px;
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid rgba(125, 211, 252, 0.2);
+  border-radius: 8px;
+  margin: 16px 0;
+  padding: 10px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.chart-title {
+  color: #7dd3fc;
+  font-size: 1.1em;
+  margin: 24px 0 8px 0;
+  padding-left: 12px;
+  border-left: 3px solid #7dd3fc;
+  font-weight: 400;
+}
+
+.viz-status {
+  text-align: center;
+  padding: 12px;
+  margin: 16px 0;
+  background: rgba(125, 211, 252, 0.15);
+  border: 1px solid rgba(125, 211, 252, 0.3);
+  border-radius: 6px;
+  color: #7dd3fc;
+  font-size: 0.95em;
+}
+
+/* Make visualization project text light colored - ONLY on projects page */
+.project-category .project-item h4 {
+  color: #7dd3fc;
+}
+
+.project-category .project-item p,
+.project-category .project-item li {
+  color: #e2e8f0;
+}
+
+.project-category .project-item strong {
+  color: #f1f5f9;
+}
+
+/* Make visualizations responsive */
+@media (max-width: 768px) {
+  .viz-container {
+    height: 350px;
+  }
+}
+
+/* Project subsections styling */
+.project-overview,
+.project-features,
+.project-technical,
+.project-results,
+.project-future {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(125, 211, 252, 0.15);
+}
+
+.project-overview p,
+.project-technical p {
+  margin-bottom: 12px;
+  line-height: 1.7;
+}
+
+.project-note {
+  margin-top: 24px;
+  padding: 12px 16px;
+  background: rgba(125, 211, 252, 0.1);
+  border-left: 3px solid #7dd3fc;
+  border-radius: 4px;
+  font-style: italic;
+  color: #cbd5e1;
+}
+
+/* Enhanced list styling for projects */
+.project-category .project-item ul {
+  margin: 12px 0;
+  padding-left: 20px;
+}
+
+.project-category .project-item ul li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.project-category .project-item ul ul {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+/* Spacing between major sections */
+.project-category {
+  margin-bottom: 40px;
+}
+
+.project-item + .project-item {
+  margin-top: 32px;
 }
